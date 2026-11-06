@@ -1,0 +1,21 @@
+INFO c.m.t.TransactionApplication - Starting TransactionApplication v1.0.0 using Java 17.0.20 with PID 44048 (C:\Users\tsudh\Projects\personal-finance-app\transaction-processing-service\target\transaction-processing-service-1.0.0.jar started by tsudh in C:\Users\tsudh\Projects\personal-finance-app\transaction-processing-service)
+INFO c.m.t.TransactionApplication - No active profile set, falling back to 1 default profile: "default"
+INFO c.m.t.TransactionApplication - Started TransactionApplication in 1.67 seconds (process running for 2.23)
+INFO c.m.t.processing.BatchProcessor - event=retry_scheduled batch=40520116-379f-44b6-9825-9cbff5a09c55 row=5 attempt=1 nextAttempt=2 reason=TRANSIENT_FAILURE
+INFO c.m.t.processing.BatchProcessor - event=retry_scheduled batch=40520116-379f-44b6-9825-9cbff5a09c55 row=5 attempt=2 nextAttempt=3 reason=TRANSIENT_FAILURE
+INFO c.m.t.processing.BatchProcessor - event=request_completed batch=40520116-379f-44b6-9825-9cbff5a09c55 row=0 status=PROCESSED attempts=1 retries=0 reason=APPLIED
+INFO c.m.t.processing.BatchProcessor - event=request_completed batch=40520116-379f-44b6-9825-9cbff5a09c55 row=1 status=PROCESSED attempts=1 retries=0 reason=APPLIED
+INFO c.m.t.processing.BatchProcessor - event=request_completed batch=40520116-379f-44b6-9825-9cbff5a09c55 row=2 status=DUPLICATE attempts=0 retries=0 reason=ALREADY_RECEIVED
+INFO c.m.t.processing.BatchProcessor - event=request_completed batch=40520116-379f-44b6-9825-9cbff5a09c55 row=3 status=PROCESSED attempts=1 retries=0 reason=APPLIED
+INFO c.m.t.processing.BatchProcessor - event=request_completed batch=40520116-379f-44b6-9825-9cbff5a09c55 row=4 status=FAILED attempts=0 retries=0 reason=AMOUNT_MUST_BE_POSITIVE
+INFO c.m.t.processing.BatchProcessor - event=request_completed batch=40520116-379f-44b6-9825-9cbff5a09c55 row=5 status=FAILED attempts=3 retries=2 reason=RETRY_EXHAUSTED
+INFO c.m.t.processing.BatchProcessor - event=batch_completed batch=40520116-379f-44b6-9825-9cbff5a09c55 processed=3 duplicate=1 failed=2 retried=1 retryAttempts=2 pending=0
+SUMMARY processed=3 duplicate=1 failed=2 retried=1 retryAttempts=2 pending=0
+row=0 transaction=TXN-2002 request=REQ-2 status=PROCESSED attempts=1 retries=0 reason=APPLIED
+row=1 transaction=TXN-2001 request=REQ-1 status=PROCESSED attempts=1 retries=0 reason=APPLIED
+row=2 transaction=TXN-2002 request=REQ-2-DUP status=DUPLICATE attempts=0 retries=0 reason=ALREADY_RECEIVED
+row=3 transaction=TXN-2003 request=REQ-3 status=PROCESSED attempts=1 retries=0 reason=APPLIED
+row=4 transaction=TXN-2004 request=REQ-4 status=FAILED attempts=0 retries=0 reason=AMOUNT_MUST_BE_POSITIVE
+row=5 transaction=TXN-2005 request=REQ-5 status=FAILED attempts=3 retries=2 reason=RETRY_EXHAUSTED
+ACCOUNT ACC-201 currency=INR balance=85 lastSequence=3
+LEDGER entries=3
